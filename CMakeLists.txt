@@ -2,7 +2,7 @@ cmake_minimum_required (VERSION 2.8)
 
 project(cmake-cpu)
 
-set(CMAKE_CXX_COMPILER "/home/eugenio/intel/oneapi/compiler/latest/linux/bin/dpcpp")
+set(CMAKE_CXX_COMPILER "dpcpp")
 
 
 
