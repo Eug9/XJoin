@@ -11,7 +11,7 @@
 //#include <cub/util_allocator.cuh>
 //#include "cub/test/test_util.h"
 
-#include "crystal/crystal.dp.hpp"
+#include "block-functions/crystal.dp.hpp"
 
 #include "utils/generator.h"
 #include "utils/gpu_utils.h"
