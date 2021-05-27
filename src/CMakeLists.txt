@@ -1,4 +1,5 @@
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -fsycl-targets=spir64_gen-unknown-unknown-sycldevice -Xs '-device dg1'")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -fsycl-targets=spir64_gen-unknown-unknown-sycldevice -Xs '-device dg1'")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
 
 add_executable(project src/ops/project.dp.cpp src/ops/utils/generator.h src/ops/utils/gpu_utils.h block-functions/load.dp.hpp block-functions/store.dp.hpp block-functions/crystal.dp.hpp)
 add_executable(join src/ops/join.dp.cpp src/ops/utils/generator.h src/ops/utils/gpu_utils.h block-functions/load.dp.hpp block-functions/store.dp.hpp block-functions/crystal.dp.hpp)
