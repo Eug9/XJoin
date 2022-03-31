@@ -87,7 +87,7 @@ void probe_kernel(int *fact_fkey, int *fact_val, int num_tuples,
 
     item_ct1.barrier(sycl::access::fence_space::local_space);
 
-  unsigned long long aggregate = sycl::ONEAPI::reduce(item_ct1.get_group(), sum, sycl::ONEAPI::plus<>());
+  unsigned long long aggregate = sycl::reduce_over_group(item_ct1.get_group(), sum, sycl::ext::oneapi::plus<>());
     //unsigned long long aggregate = BlockSum<long long, BLOCK_THREADS, ITEMS_PER_THREAD>(sum, (long long*)buffer, item_ct1);
 
     //item_ct1.barrier();

@@ -1,6 +1,6 @@
 #include <CL/sycl.hpp>
 #include <dpct/dpct.hpp>
-#include <CL/sycl/ONEAPI/atomic_ref.hpp>
+//#include <CL/sycl/ONEAPI/atomic_ref.hpp>
 #include <CL/sycl/accessor.hpp>
 
 #pragma once
@@ -8,10 +8,10 @@
 #define HASH(X,Y,Z) ((X-Z) % Y)
 
 template<typename T>
-using global_atomic_ref = sycl::ONEAPI::atomic_ref<
+using global_atomic_ref = sycl::ext::oneapi::atomic_ref<
                                 T,
-                                sycl::ONEAPI::detail::memory_order::relaxed,
-                                sycl::ONEAPI::detail::memory_scope::device,
+                                sycl::ext::oneapi::detail::memory_order::relaxed,
+                                sycl::ext::oneapi::detail::memory_scope::device,
                                 sycl::access::address_space::global_space>;
 
 
